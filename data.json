@@ -1,0 +1,60 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "nomination": "А",
+      "description": "б",
+      "image": "",
+      "category": "ы",
+      "price": 12,
+      "date": "2023-07-07T06:00:00Z",
+      "last_modified_date": "2023-07-07T17:32:41Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "nomination": "Часы",
+      "description": "показывают время",
+      "image": "",
+      "category": "time",
+      "price": 20,
+      "date": "2023-07-04T06:00:00Z",
+      "last_modified_date": "2023-07-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "nomination": "asd",
+      "description": "asdd"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 5,
+    "fields": {
+      "nomination": "Ноутбук",
+      "description": "портативный компьютер"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 6,
+    "fields": {
+      "nomination": "Phone",
+      "description": "tools"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 7,
+    "fields": {
+      "nomination": "Name",
+      "description": "Name"
+    }
+  }
+]
