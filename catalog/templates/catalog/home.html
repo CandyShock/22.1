@@ -1,6 +1,7 @@
 {% extends 'catalog/base.html' %}
 {% block content %}
 {% for object in object_list %}
+{% load tags %}
 <div class="col">
     <div class="card mb-4 rounded-3 shadow-sm">
         <div class="card-header py-3">
@@ -12,7 +13,7 @@
             <h1 class="list-unstyled mt-3 mb-4">
                 {{ object }}</h1>
             <div class="card mt-3 mb-4 card-primary" style="width: 18rem;">
-                <img src="/media/{{ object.image }}" class="card-img-top" alt="Card image cap">
+                <img src="{{ object.image|media }}" class="card-img-top" alt="Card image cap">
                 <div class="card-body">
                 </div>
             </div>
