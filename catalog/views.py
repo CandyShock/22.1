@@ -1,15 +1,11 @@
 from django.shortcuts import render
-
+from django.views.generic import ListView
 from catalog.models import Product
 
 
-def home(request):
-    product_list = Product.objects.all()
-    context = {
-        'object_list': product_list,
-        'title': 'Pricing'
-    }
-    return render(request, 'catalog/home.html', context)
+class ProductListView(ListView):
+    model = Product
+    template_name = 'catalog/home.html'
 
 
 def sing_in(request):
