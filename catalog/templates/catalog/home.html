@@ -1,5 +1,8 @@
 {% extends 'catalog/base.html' %}
 {% block content %}
+<div class="col-12 mb-5">
+    <a class="btn btn-primary" href="{% url 'catalog:create_product' %}">Add product</a>
+</div>
 {% for object in object_list %}
 {% load tags %}
 <div class="col">
@@ -8,16 +11,17 @@
             <h4 class="my-0 fw-normal">Product</h4>
         </div>
         <div class="card-body">
-            <h1 class="card-title pricing-card-title">$100<small
-                    class="text-body-secondary fw-light"></small></h1>
-            <h1 class="list-unstyled mt-3 mb-4">
-                {{ object }}</h1>
+            <h1 class="card-title pricing-card-title">{{ object.price }}$</small></h1>
+                    <h1 class="text-body-secondary fw-light ">{{ object.nomination }}</small></h1>
+            <h1 class="text-body-secondary fw-light mt-3 mb-4">
+                {{ object.description }}</h1>
             <div class="text-center mt-3 mb-4">
                 <img src="{{ object.image|media }}" class="text-center" width="200" height="200" alt="Card image cap">
                 <div class="card-body">
                 </div>
             </div>
             <button type="button" class="w-100 btn btn-lg btn-outline-primary">BUY</button>
+             <a type="button" class="w-100 btn btn-lg btn-outline-primary mt-2 mb-2" href="{% url 'catalog:update_product' object.pk %}">Update</a>
         </div>
     </div>
 </div>
