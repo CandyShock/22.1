@@ -1,9 +1,11 @@
 from django.db import models
 
+NULLABLE = {'blank': True, 'null': True}
+
 
 class Product(models.Model):
-    nomination = models.CharField(max_length=30, verbose_name='наименование')
-    description = models.TextField(verbose_name='Описание')
+    nomination = models.CharField(max_length=30, verbose_name='наименование', unique=True, **NULLABLE)
+    description = models.TextField(verbose_name='Описание', unique=True, **NULLABLE)
     image = models.ImageField(upload_to='products/', verbose_name='картинка', null=True, blank=True)
     category = models.CharField(max_length=30)
     price = models.IntegerField(verbose_name='цена')
@@ -44,4 +46,3 @@ class Version(models.Model):
     class Meta:
         verbose_name = 'Версия'
         verbose_name_plural = 'Версии'
-

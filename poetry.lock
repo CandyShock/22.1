@@ -37,6 +37,18 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "nullable"
+version = "0.2.0"
+description = "Typed Null support"
+category = "main"
+optional = false
+python-versions = ">=3.8,<4.0"
+files = [
+    {file = "nullable-0.2.0-py3-none-any.whl", hash = "sha256:3faea4e40fbd0b23080df2bb77113aa6a5d6eaaa148731aab73b1a045b9f35cf"},
+    {file = "nullable-0.2.0.tar.gz", hash = "sha256:d42011b1634750e1df528a86781f3d0abd92d2aba8211c91a9182880a1753307"},
+]
+
+[[package]]
 name = "sqlparse"
 version = "0.4.4"
 description = "A non-validating SQL parser."
@@ -68,4 +80,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "719fc8986fe334947e493e9872c15fcc3e0dd4187ed218a7e258d2ea6c4ca6ab"
+content-hash = "fd1a922f15314d9b0ad562d4994205450cb7695320a9ec1eb769839759aaf0ec"

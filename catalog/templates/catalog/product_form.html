@@ -8,42 +8,28 @@
                 <div class="col-6">
                     <div class="card">
                         {% csrf_token %}
-                        <h4 class="col-6"></h4>
-                        <form class="mb-3" novalidate>
-                            <div class="col-6">
-                                <label for="id_date_of_create" class="form-label">Nomanation</label>
-                                {{ form.nomination }}
-                                <div class="invalid-feedback">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <label for="id_date_of_create" class="form-label">Price</label>
-                                {{ form.price }}
-                            </div>
-                            <div class="col-6 mt-2 mb-2">
-                                <label class="form-label">Description</label>
-                                {{ form.description }}
-                            </div>
+                        <div class="card-header">
+                            <h3 class="card-title">Create</h3>
+                        </div>
+                        <div class="card-body">
+                            {{ form.as_p }}
+                        </div>
+                        <div class="card-footer">
+                        </div>
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-success mt-2 mb-2 w-100 btn btn-lg">
+                                {% if object %}
+                                Save
+                                {% else %}
+                                Create
+                                {% endif %}
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <label for="id_preview" class="form-label">Image</label>
-                    {{ form.image }}
-                    <div class="invalid-feedback">
-                        Please enter a valid email address for shipping updates.
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <button type="submit" class="btn btn-success mt-2 mb-2">
-                    {% if object %}
-                    Save
-                    {% else %}
-                    Create
-                    {% endif %}
-                </button>
             </div>
         </div>
+        {% if object %}
         <div class="col-5">
             <div class="card">
                 <div class="card-header">
@@ -55,10 +41,13 @@
                     {{ form.as_p }}
                     {% endfor %}
                 </div>
-                <div class="card-footer">
-                </div>
             </div>
         </div>
+        <div class="card-footer">
+        </div>
+</div>
+</div>
+{% endif %}
 </div>
 </form>
 </div>
