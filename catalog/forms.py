@@ -1,5 +1,4 @@
 from django import forms
-from django.http import HttpResponse
 
 from catalog.models import Product, Version
 
